@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<div class="container">
+        <h1>Student Registration</h1>
+        <form action="/register" method="POST">
+            <label for="name">Name</label>
+            <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Enter your name"
+                required
+            >
+     <label for="email">Email</label>
+            <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="Enter your email"
+                required
+            >
+            <label for="course">Course</label>
+            <select id="course" name="course" required>
+                <option value="">Select Course</option>
+                <option value="CSE">CSE</option>
+                <option value="ECE">ECE</option>
+                <option value="IT">IT</option>
+            </select>
+            <button type="submit">Register</button>
+        </form>
+        <% if (student) { %>
+            <div class="success">
+                <h2>Registration Successful!</h2>
+                <p>
+                    <strong>Name:</strong>
+                    <%= student.name %>
+                </p>
+                <p>
+                    <strong>Email:</strong>
+                    <%= student.email %>
+                </p>
+                <p>
+                    <strong>Course:</strong>
+                    <%= student.course %>
+                </p>
+            </div>
+        <% } %>
+    </div>
+</body>
+</html>
