@@ -1,0 +1,28 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f5f7fa;
+}
+.hero {
+    padding: 100px 20px;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: white;
+}
+.hero h1 {
+    font-size: 48px;
+    font-weight: bold;
+}
+.hero p {
+    font-size: 20px;
+}
+.card {
+    border: none;
+    border-radius: 15px;
+    background: white;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
